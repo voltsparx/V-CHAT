@@ -1,112 +1,90 @@
-█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
-█  ██╗   ██╗         ██████╗██╗  ██╗ █████╗ ████████╗  █
-█  ╚██╗ ██╔╝        ██╔════╝██║  ██║██╔══██╗╚══██╔══╝  █
-█   ╚████╔╝ █████╗  ██║     ███████║███████║   ██║     █
-█    ╚██╔╝  ╚════╝  ██║     ██╔══██║██╔══██║   ██║     █
-█     ██║           ╚██████╗██║  ██║██║  ██║   ██║     █
-█     ╚═╝            ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝     █
-█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
-║► BY: Voltsparx                         VERSION: 3.2 ◄║
-║► GITHUB: https://github.com/Voltsparx/V-CHAT.git    ◄║
-▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+╔══════════════════════════════════════════════════════════════╗
+║                   V-CHAT - Terminal Chat Application         ║
+║                   Version 2.0                                ║
+║                   By Voltsparx                               ║
+╚══════════════════════════════════════════════════════════════╝
 
-V-CHAT TERMINAL CHAT v3.2
-=============================
+📌 DESCRIPTION:
+V-CHAT is a secure, cross-platform terminal chat application with:
+- Encrypted communications (future update)
+- Customizable colors and notifications
+- Private messaging and user mentions
+- Sound notifications for messages
+- Works on Windows, Linux, and macOS
 
-Developed by: Voltsparx
-Email: voltsparx@gmail.com
+🌟 FEATURES:
+✔ Cross-platform terminal interface
+✔ Custom username and message colors
+✔ @mentions with sound notifications
+✔ Private messages (/msg command)
+✔ Online user list (/users command)
+✔ Message timestamps
+✔ Network auto-detection (LAN/WAN)
+✔ Sound notifications (customizable)
+✔ Lightweight and fast
 
-INSTALLATION
-------------
-
-Required Packages:
+⚙️ SYSTEM REQUIREMENTS:
 - Python 3.6+
-- netifaces (for network detection)
-- colorama (for colored terminal output)
-- sound playback tools
+- Terminal with ANSI color support
+- Basic sound playback capability
 
-OS-Specific Installation:
+📥 INSTALLATION:
+1. Ensure Python 3.6+ is installed
+2. Install required packages:
+   pip install colorama netifaces
 
-1. Linux (Debian/Ubuntu/Kali):
-   sudo apt update
-   sudo apt install python3 python3-pip
-   pip3 install netifaces colorama
-   sudo apt install libasound2-dev  # For sound support
+3. Clone the repository:
+   git clone https://github.com/voltsparx/V-CHAT.git
+   cd V-CHAT
 
-2. macOS:
-   # Install Homebrew if you don't have it:
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-   brew install python
-   pip3 install netifaces colorama
-   # Sound support comes pre-installed
+🚀 USAGE:
 
-3. Windows:
-   # Download Python from python.org (3.6+)
-   # During installation, check "Add Python to PATH"
-   pip install netifaces colorama
-   # Sound support comes pre-installed
+► SERVER MODE:
+python vchat.py --server --username YOUR_NAME
 
-QUICK START
------------
+► CLIENT MODE:
+python vchat.py --host SERVER_IP --username YOUR_NAME
 
-1. First-time setup:
-   mkdir -p assets/sounds
-   # Add your sound files (optional):
-   # - assets/sounds/notify.mp3
-   # - assets/sounds/mention.wav
+Optional arguments:
+--port PORT_NUMBER (default: 65432)
 
-2. Start the server:
-   python v_chat.py --server --username Admin
+🔧 CUSTOMIZATION:
+When first run, you'll be prompted to:
+1. Choose your username color
+2. Choose your message arrow color
+3. Select network type (for server)
 
-3. Connect clients:
-   python v_chat.py --host [SERVER_IP] --username Client1
+🎮 COMMANDS:
+/exit             - Disconnect from chat
+/msg USER MESSAGE - Send private message
+/notify [True/False] - Toggle notifications
+/users            - List online users
+@username         - Mention a user (plays sound)
 
-NETWORK TYPES
--------------
-When starting the server, choose:
-1. Internet - Public IP (requires port forwarding)
-2. WiFi - Local wireless network IP
-3. Ethernet - Local wired network IP
+🔒 SECURITY NOTES:
+- Currently transmits in plaintext (encryption coming in v3.0)
+- Only share server IP with trusted users
+- Default port is 65432 (change with --port for security)
 
-COMMAND REFERENCE
------------------
+📁 FILE STRUCTURE:
+vchat.py          - Main application
+assets/sounds/    - Notification sound files
+README.txt        - This file
 
-Basic Commands:
-/exit-terminal-chat - Disconnect gracefully
-/msg [user] [message] - Private message
-@username - Mention a user (plays sound)
+📧 CONTACT:
+Author: Voltsparx
+Email: voltsparx@gmail.com
+GitHub: https://github.com/voltsparx/V-CHAT
 
-Notification Control:
-/notify-me on every message True - All messages
-/notify-me on every message False - Only mentions
+⚠️ DISCLAIMER:
+This tool is for educational purposes only. The developer is not responsible 
+for any misuse of this software.
 
-TROUBLESHOOTING
----------------
-
-Common Issues:
-
-1. Connection Failed:
-   - Verify server is running
-   - Check firewall settings
-   - Ensure correct IP/port
-
-2. No Sound:
-   - Check sound files in assets/sounds/
-   - Verify OS sound permissions
-
-3. Network Detection Issues:
-   - Ensure netifaces is installed
-   - Try manual --host parameter
-
-For Windows Users:
-- If pip isn't recognized, use:
-  py -m pip install netifaces colorama
-
-For macOS Users:
-- If Python isn't found after brew install:
-  echo 'export PATH="/usr/local/opt/python/libexec/bin:$PATH"' >> ~/.zshrc
-  source ~/.zshrc
-
-SUPPORT
--------
-Report issues to: voltsparx@gmail.com
+🔄 CHANGELOG:
+v2.0 - Complete rewrite with:
+       - Better error handling
+       - Timestamps on messages
+       - User list command
+       - Improved network detection
+       - Simplified commands
+v1.0 - Initial release
