@@ -1,8 +1,8 @@
-╔════════════════════════════════════════════╗
-║    V-CHAT - Terminal Chat Application      ║
-║              Version 2.0                   ║
-║             By Voltsparx                   ║
-╚════════════════════════════════════════════╝
+______________________________________________
+|    V-CHAT - Terminal Chat Application      |
+|              Version 2.0                   |
+|             By Voltsparx                   |
+----------------------------------------------
 
 📌 DESCRIPTION:
 V-CHAT is a secure, cross-platform terminal chat application with:
