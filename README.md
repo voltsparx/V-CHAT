@@ -15,13 +15,21 @@ V-CHAT is a secure, cross-platform terminal chat application with:
 🌟 FEATURES:
 
 ✔ Cross-platform terminal interface
+
 ✔ Custom username and message colors
+
 ✔ @mentions with sound notifications
+
 ✔ Private messages (/msg command)
+
 ✔ Online user list (/users command)
+
 ✔ Message timestamps
+
 ✔ Network auto-detection (LAN/WAN)
+
 ✔ Sound notifications (customizable)
+
 ✔ Lightweight and fast
 
 ⚙️ SYSTEM REQUIREMENTS:
