@@ -13,6 +13,7 @@ V-CHAT is a secure, cross-platform terminal chat application with:
 - Works on Windows, Linux, and macOS
 
 🌟 FEATURES:
+
 ✔ Cross-platform terminal interface
 ✔ Custom username and message colors
 ✔ @mentions with sound notifications
